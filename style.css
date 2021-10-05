@@ -1,0 +1,99 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+
+/* global styles */
+:root {
+  --basic-transition: 0.3s linear;
+  --light-dark-color: #2b3844;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: #111517;
+  margin: 0 auto;
+}
+body.dark {
+  color: #fff;
+}
+
+/* 
+HEADER
+*/
+header {
+  background: #fff;
+  padding: 2rem 1rem;
+  transition: var(--basic-transition);
+}
+.dark header {
+  background: var(--light-dark-color);
+}
+
+nav {
+  max-width: 375px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h3 {
+  font-size: 14px;
+  transition: var(--basic-transition);
+}
+
+.color-mode {
+  display: flex;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.color-mode p {
+  font-size: 12px;
+  font-weight: 600;
+  transition: var(--basic-transition);
+}
+
+.far.fa-moon {
+  font-size: 12px;
+  display: block;
+  transition: var(--basic-transition);
+}
+.fas.fa-moon {
+  font-size: 12px;
+  display: none;
+  transition: var(--basic-transition);
+}
+
+.color-mode.dark .far.fa-moon {
+  display: none;
+}
+.color-mode.dark .fas.fa-moon {
+  display: block;
+}
+
+/* 
+MAIN
+*/
+
+main {
+  background: #f2f2f2;
+  padding-top: 2rem;
+  transition: var(--basic-transition);
+}
+.dark main {
+  background: #202c36;
+}
+
+/* 
+FILTERS
+*/
+.filters {
+  max-width: 375px;
+  margin: 0 auto;
+}
