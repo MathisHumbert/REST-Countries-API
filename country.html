@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>All Countries</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav>
+        <h3>Where in the world?</h3>
+        <div class="color-mode">
+          <div class="icons">
+            <i class="far fa-moon"></i> <i class="fas fa-moon"></i>
+          </div>
+          <p>Dark Mode</p>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+      <div class="home-container">
+        <!-- link to home page -->
+        <a href="index.html" class="home-btn"
+          ><button>
+            <i class="fas fa-long-arrow-alt-left"></i>
+            <p>Back</p>
+          </button></a
+        >
+        <!-- flag -->
+        <img
+          src="./1280px-Flag_of_Germany.svg.png"
+          alt=""
+          class="country-flag"
+        />
+        <!-- country info -->
+
+        <h1 class="home-country-name">Belgium</h1>
+        <div class="country-detail">
+          <p>Native Name: <span>Belgié</span></p>
+          <p>Population <span>11.319.511</span></p>
+          <p>Region <span>Europe</span></p>
+          <p>Sub Region <span>Western Europe</span></p>
+        </div>
+        <div class="country-detail">
+          <p>Top Level Domain <span>be</span></p>
+          <p>Currencies <span>Euro</span></p>
+          <p>Languages <span>Dutch, French, German</span></p>
+        </div>
+
+        <!-- country border -->
+        <div class="border">
+          <p>Border Countries:</p>
+          <div class="country-border">
+            <div class="single-country-border">France</div>
+            <div class="single-country-border">Germany</div>
+            <div class="single-country-border">Netherlands</div>
+            <div class="single-country-border">France</div>
+            <div class="single-country-border">Germany</div>
+            <div class="single-country-border">Netherlands</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- js -->
+    <script src="./app.js"></script>
+  </body>
+</html>
