@@ -1,16 +1,21 @@
+// Display the countries for the index.html
+
 function displayCountries(countries) {
+  // Get elements and reset HTML
   const countriesMain = document.querySelector('.countries');
   countriesMain.innerHTML = '';
+
+  // Create HTML
   countries.forEach((country) => {
     let { name, population, region, capital, flags } = country;
     name = name.common;
-    capital = capital || 'unkown';
+    capital = capital || 'Unkown';
     flags = flags.png;
     let localName = country.cca3;
 
     let countryEl = document.createElement('a');
     countryEl.classList.add('single-country');
-    countryEl.setAttribute('href', 'country.html');
+    countryEl.setAttribute('href', 'country-page.html');
     countryEl.innerHTML = `
     <img src="${flags}" alt="${name}" />
           <div class="country-info">

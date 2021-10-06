@@ -1,3 +1,5 @@
+// Display the countries for the country-page.html
+
 // import
 import getCountry from './getCountry.js';
 
@@ -5,7 +7,6 @@ import getCountry from './getCountry.js';
 const countryContainer = document.querySelector('.country-container');
 const BORDER_API = 'https://restcountries.com/v3.1/alpha/';
 
-// function
 function displayCountry(country) {
   // reset innerHTML
   countryContainer.innerHTML = '';

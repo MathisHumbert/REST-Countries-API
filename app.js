@@ -1,15 +1,10 @@
 // import
 import getCountries from './utils/getCountries.js';
-import displayCountries from './utils/displayCountries.js';
-
-// let data = getCountries();
-// console.log(data)
+import color from './utils/colorToggle.js';
 
 // getting all elemnts
-const colorMode = document.querySelector('.color-mode');
 const selectFilter = document.querySelector('.filter-header');
 const selectList = document.querySelector('.regions');
-const countriesMain = document.querySelector('.countries');
 const form = document.getElementById('search-form');
 const textInput = document.getElementById('country-name');
 
@@ -37,11 +32,6 @@ function getTheName(e) {
   getCountries(NAME_API + textInput.value);
   this.reset();
 }
-
-// Color toggle
-colorMode.addEventListener('click', (e) => {
-  document.body.classList.toggle('dark');
-});
 
 // Select event
 selectFilter.addEventListener('click', () => {
