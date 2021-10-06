@@ -70,10 +70,10 @@ header h3 {
   transition: var(--basic-transition);
 }
 
-.color-mode.dark .far.fa-moon {
+.dark .far.fa-moon {
   display: none;
 }
-.color-mode.dark .fas.fa-moon {
+.dark .fas.fa-moon {
   display: block;
 }
 
