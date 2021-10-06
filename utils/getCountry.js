@@ -1,18 +1,17 @@
-import displayCountries from './displayCountries.js';
 import displayError from './displayError.js';
+import displayCountry from './displayCountry.js';
 
-// function accessing data
-async function getCountries(url) {
+async function getCountry(url) {
   try {
     const response = await fetch(url);
     const data = await response.json();
 
-    // display the countries
-    displayCountries(data);
+    // display the country
+    displayCountry(data);
   } catch (error) {
     displayError();
     console.log(error);
   }
 }
 
-export default getCountries;
+export default getCountry;

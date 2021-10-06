@@ -6,6 +6,7 @@ function displayCountries(countries) {
     name = name.common;
     capital = capital || 'unkown';
     flags = flags.png;
+    let localName = country.cca3;
 
     let countryEl = document.createElement('a');
     countryEl.classList.add('single-country');
@@ -22,7 +23,7 @@ function displayCountries(countries) {
           </div>
     `;
     countryEl.addEventListener('click', () => {
-      localStorage.setItem('country', `${name}`);
+      localStorage.setItem('country', `${localName}`);
     });
     countriesMain.appendChild(countryEl);
   });

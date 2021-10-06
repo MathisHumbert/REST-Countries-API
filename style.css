@@ -275,10 +275,26 @@ COUNTRY
   gap: 2rem;
 }
 
+.country-container {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+}
+
 .country-detail {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+.country-detail p {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.country-detail span {
+  font-weight: 300;
+  font-size: 14px;
 }
 
 .home-country-name {
