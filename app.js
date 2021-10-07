@@ -14,7 +14,9 @@ const REGION_API = 'https://restcountries.com/v3.1/region/';
 const NAME_API = 'https://restcountries.com/v3.1/name/';
 
 // load all of the countries
-getCountries(ALL_API);
+window.addEventListener('DOMContentLoaded', () => {
+  getCountries(ALL_API);
+});
 
 // filter by region
 selectList.addEventListener('click', getTheRegion);

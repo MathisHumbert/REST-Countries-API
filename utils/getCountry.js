@@ -1,19 +1,12 @@
-// Get the country data for the displayCountry function and then Display the HTML
+// get the data and use it for the countryPage.js
 
-import displayError from './displayError.js';
+import fetchCountries from './fetch.js';
 import displayCountry from './displayCountry.js';
 
 async function getCountry(url) {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
+  const data = await fetchCountries(url);
 
-    // display the country
-    displayCountry(data);
-  } catch (error) {
-    displayError();
-    console.log(error);
-  }
+  displayCountry(data);
 }
 
 export default getCountry;

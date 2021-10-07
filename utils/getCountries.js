@@ -1,18 +1,13 @@
+// get the data and use it for the app.js
+
 import displayCountries from './displayCountries.js';
-import displayError from './displayError.js';
+import fetchCountries from './fetch.js';
 
-// function accessing data
 async function getCountries(url) {
-  try {
-    const response = await fetch(url);
-    const data = await response.json();
+  const data = await fetchCountries(url);
 
-    // display the countries
-    displayCountries(data);
-  } catch (error) {
-    displayError();
-    console.log(error);
-  }
+  if (data) displayCountries(data);
+  else return;
 }
 
 export default getCountries;
