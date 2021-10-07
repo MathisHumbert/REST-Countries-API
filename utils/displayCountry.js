@@ -37,9 +37,11 @@ function displayCountry(country) {
   let countryEl = document.createElement('div');
   countryEl.classList.add('country-container');
   countryEl.innerHTML = `
-<img src="${flags}" alt="" class="${name}" />
+<img src="${flags}" alt="${name}" class="country-img" />
 
+<div class="single-country-info">
 <h1 class="home-country-name">${name}</h1>
+<div class= "detail-container">
 <div class="country-detail">
   <p>Native Name: <span>${nativeName}</span></p>
   <p>Population: <span>${population}</span></p>
@@ -52,6 +54,7 @@ function displayCountry(country) {
   <p>Currencies: <span>${currencies}</span></p>
   <p>Languages: <span>${languages}</span></p>
 </div>
+</div>
 
 <div class="border">
   <p>Border Countries:</p>
@@ -59,6 +62,7 @@ function displayCountry(country) {
   ${borders}
   </div>
 </div>
+<div>
   `;
 
   // Display the country info
