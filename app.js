@@ -1,6 +1,8 @@
 // import
 import getCountries from './utils/getCountries.js';
 import color from './utils/colorToggle.js';
+import displayError from './utils/displayError.js';
+import colorLoad from './utils/colorLoad.js';
 
 // getting all elemnts
 const selectFilter = document.querySelector('.select-filter');
@@ -17,6 +19,7 @@ const NAME_API = 'https://restcountries.com/v3.1/name/';
 // load all of the countries
 window.addEventListener('DOMContentLoaded', () => {
   getCountries(ALL_API);
+  colorLoad();
 });
 
 // filter by region

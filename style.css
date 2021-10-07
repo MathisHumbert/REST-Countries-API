@@ -25,6 +25,28 @@ body.dark {
   background: #202c36;
 }
 
+.error {
+  visibility: hidden;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  width: 300px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error p {
+  font-size: 20px;
+  font-weight: 800;
+  color: #eb2f06;
+}
+
 /* 
 HEADER
 */
@@ -441,6 +463,14 @@ COUNTRY
   justify-content: center;
   align-items: center;
 }
+
+.no-border {
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #eb2f06;
+}
+
+/* media screen  */
 
 @media screen and (min-width: 1440px) {
   main {

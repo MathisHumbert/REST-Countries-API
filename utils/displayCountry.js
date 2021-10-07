@@ -66,6 +66,7 @@ function displayCountry(country) {
   `;
 
   // Display the country info
+  document.title = name;
   countryContainer.appendChild(countryEl);
 
   // Display Border Country Event Click
