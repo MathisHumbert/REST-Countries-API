@@ -3,7 +3,7 @@
 
 /* global styles */
 :root {
-  --basic-transition: 0.3s linear;
+  --basic-transition: 0.3s ease;
   --light-dark-color: #2b3844;
 }
 
@@ -17,9 +17,12 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   color: #111517;
   margin: 0 auto;
+  transition: var(--basic-transition);
+  background: #f2f2f2;
 }
 body.dark {
   color: #fff;
+  background: #202c36;
 }
 
 /* 
@@ -29,6 +32,8 @@ header {
   background: #fff;
   padding: 2rem 1rem;
   transition: var(--basic-transition);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 3px;
 }
 .dark header {
   background: var(--light-dark-color);
@@ -51,6 +56,11 @@ header h3 {
   display: flex;
   gap: 1rem;
   cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.color-mode:hover {
+  transform: scale(1.2);
 }
 
 .color-mode p {
@@ -80,7 +90,6 @@ header h3 {
 /* 
 MAIN
 */
-
 main {
   background: #f2f2f2;
   padding-top: 2rem;
@@ -111,10 +120,10 @@ FILTERS
   color: #b2b2b2;
   border-radius: 4px;
   margin-bottom: 2rem;
+  transition: var(--basic-transition);
 }
 .dark .search-form {
   background: var(--light-dark-color);
-  transition: var(--basic-transition);
 }
 
 .search-form input {
@@ -123,15 +132,19 @@ FILTERS
   font-family: inherit;
   font-size: 12px;
   background: transparent;
+  transition: var(--basic-transition);
+
+  width: 100%;
 }
 .dark .search-form input {
   color: #fff;
-  transition: var(--basic-transition);
 }
 
+.fa-search {
+  transition: var(--basic-transition);
+}
 .dark .fa-search {
   color: #fff;
-  transition: var(--basic-transition);
 }
 
 .search-form input:focus {
@@ -140,10 +153,10 @@ FILTERS
 
 .search-form input::placeholder {
   color: #c4c4c4;
+  transition: var(--basic-transition);
 }
 .dark .search-form input::placeholder {
   color: #fff;
-  transition: var(--basic-transition);
 }
 
 /* select-filter */
@@ -151,7 +164,11 @@ FILTERS
   width: 95%;
   margin: 0 auto;
   font-size: 12px;
-  position: relative;
+}
+
+.select-filter-container {
+  width: fit-content;
+  height: fit-content;
 }
 
 .filter-header {
@@ -162,14 +179,13 @@ FILTERS
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  margin-bottom: 5px;
   border-radius: 4px;
   cursor: pointer;
   overflow: hidden;
+  transition: var(--basic-transition);
 }
 .dark .filter-header {
   background: var(--light-dark-color);
-  transition: var(--basic-transition);
 }
 
 .filter-header .fa-chevron-down {
@@ -177,8 +193,19 @@ FILTERS
   color: #000000;
   transition: var(--basic-transition);
 }
+
 .dark .filter-header .fa-chevron-down {
   color: #fff;
+}
+
+.space-between {
+  height: 5px;
+  width: 100%;
+  background: #f2f2f2;
+  transition: var(--basic-transition);
+}
+.dark .space-between {
+  background: #202c36;
 }
 
 .regions {
@@ -188,6 +215,7 @@ FILTERS
   padding: 1rem 0;
   position: absolute;
   display: none;
+  transition: var(--basic-transition);
 }
 .regions.show {
   display: block;
@@ -205,10 +233,23 @@ FILTERS
   width: fit-content;
 }
 
+.border-bottom {
+  width: 0%;
+  height: 2px;
+  background: #111517;
+  transition: width 0.8s ease;
+}
+.dark .border-bottom {
+  background: #fff;
+}
+
+.regions li:hover .border-bottom {
+  width: 100%;
+}
+
 /* 
 COUNTRIES
 */
-
 .countries {
   max-width: 375px;
   margin: 0 auto;
@@ -225,13 +266,20 @@ COUNTRIES
   height: 336px;
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  transition: var(--basic-transition);
   text-decoration: none;
   color: #111517;
+  transition: var(--basic-transition);
 }
 .dark .single-country {
   background: var(--light-dark-color);
   color: #fff;
+}
+.dark .single-country:hover {
+  box-shadow: 0 3px 6px rgba(255, 255, 255, 0.16),
+    0 3px 6px rgba(255, 255, 255, 0.23);
+}
+.single-country:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .single-country img {
@@ -248,6 +296,7 @@ COUNTRIES
 
 .country-name {
   font-size: 18px;
+  transition: var(--basic-transition);
 }
 
 .country-details {
@@ -258,6 +307,7 @@ COUNTRIES
   font-size: 16px;
   font-weight: 600;
   margin: 4px 0;
+  transition: var(--basic-transition);
 }
 
 .country-details span {

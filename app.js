@@ -3,7 +3,8 @@ import getCountries from './utils/getCountries.js';
 import color from './utils/colorToggle.js';
 
 // getting all elemnts
-const selectFilter = document.querySelector('.filter-header');
+const selectFilter = document.querySelector('.select-filter-container');
+const filterHeader = document.querySelector('.filter-header');
 const selectList = document.querySelector('.regions');
 const form = document.getElementById('search-form');
 const textInput = document.getElementById('country-name');
@@ -35,7 +36,10 @@ function getTheName(e) {
   this.reset();
 }
 
-// Select event
-selectFilter.addEventListener('click', () => {
-  selectList.classList.toggle('show');
+// Show the regions
+selectFilter.addEventListener('mouseenter', () => {
+  selectList.classList.add('show');
+});
+selectFilter.addEventListener('mouseleave', () => {
+  selectList.classList.remove('show');
 });
