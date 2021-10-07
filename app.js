@@ -3,7 +3,7 @@ import getCountries from './utils/getCountries.js';
 import color from './utils/colorToggle.js';
 
 // getting all elemnts
-const selectFilter = document.querySelector('.select-filter-container');
+const selectFilter = document.querySelector('.select-filter');
 const filterHeader = document.querySelector('.filter-header');
 const selectList = document.querySelector('.regions');
 const form = document.getElementById('search-form');

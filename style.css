@@ -91,14 +91,11 @@ header h3 {
 MAIN
 */
 main {
-  background: #f2f2f2;
-  padding-top: 2rem;
-  padding-bottom: 4rem;
-  transition: var(--basic-transition);
+  padding: 2rem 2rem 4rem 2rem;
+  max-width: 375px;
+  margin: 0 auto;
   min-height: 100vh;
-}
-.dark main {
-  background: #202c36;
+  border: 1px solid red;
 }
 
 /* 
@@ -112,8 +109,6 @@ FILTERS
 /* search filter */
 .search-form {
   background: #fff;
-  width: 95%;
-  margin: 0 auto;
   padding: 14px 28px;
   display: flex;
   gap: 2rem;
@@ -133,7 +128,6 @@ FILTERS
   font-size: 12px;
   background: transparent;
   transition: var(--basic-transition);
-
   width: 100%;
 }
 .dark .search-form input {
@@ -161,12 +155,7 @@ FILTERS
 
 /* select-filter */
 .select-filter {
-  width: 95%;
-  margin: 0 auto;
   font-size: 12px;
-}
-
-.select-filter-container {
   width: fit-content;
   height: fit-content;
 }
@@ -251,8 +240,6 @@ FILTERS
 COUNTRIES
 */
 .countries {
-  max-width: 375px;
-  margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -318,8 +305,7 @@ COUNTRIES
 COUNTRY 
 */
 .home-container {
-  max-width: 375px;
-  margin: 0 auto;
+  width: 100%;
   display: flex;
   flex-flow: column;
   gap: 2rem;
@@ -340,6 +326,7 @@ COUNTRY
 .country-detail p {
   font-weight: 600;
   font-size: 14px;
+  transition: var(--basic-transition);
 }
 
 .country-detail span {
@@ -349,6 +336,7 @@ COUNTRY
 
 .home-country-name {
   font-size: 22px;
+  transition: var(--basic-transition);
 }
 
 .country-flag {
@@ -376,12 +364,26 @@ COUNTRY
   border: 0;
   cursor: pointer;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.3);
+  transition: var(--basic-transition);
+}
+.dark .home-btn button {
+  background: #2b3844;
+  color: #fff;
+}
+
+.fa-long-arrow-alt-left {
+  transition: all 0.5s ease;
+}
+
+.home-btn button:hover .fa-long-arrow-alt-left {
+  transform: translateX(-10px);
 }
 
 .border p {
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 1rem;
+  transition: var(--basic-transition);
 }
 
 .country-border {
@@ -390,7 +392,6 @@ COUNTRY
   gap: 10px;
   margin: 0 auto;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .country-border p {
@@ -399,11 +400,30 @@ COUNTRY
 
 .single-country-border {
   background: #fff;
-  width: 116px;
+  width: 96px;
   height: 38px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 12px;
+  border: 1px solid transparent;
   cursor: pointer;
+  transition: var(--basic-transition);
+}
+.dark .single-country-border {
+  background: #2b3844;
+  color: #fff;
+}
+
+.single-country-border:hover {
+  background: transparent;
+  border-color: #2b3844;
+  font-size: 16px;
+  font-weight: 800;
+  color: #2b3844;
+}
+.dark .single-country-border:hover {
+  background: transparent;
+  border-color: #f2f2f2;
+  color: #f2f2f2;
 }
