@@ -2,6 +2,7 @@
 
 // import
 import getCountry from './getCountry.js';
+import formatPopulation from './formatPop.js';
 
 // get elements
 const countryContainer = document.querySelector('.country-container');
@@ -29,6 +30,7 @@ function displayCountry(country) {
   languages = Object.values(languages).join(', ');
   flags = flags.png;
   tld = tld.join(', ');
+  population = formatPopulation(population);
 
   // getting the borders
   let borders = getBorders(country);

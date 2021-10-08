@@ -1,4 +1,5 @@
 // Display the countries for the index.html
+import formatPopulation from './formatPop.js';
 
 function displayCountries(countries) {
   // Get elements and reset HTML
@@ -12,6 +13,8 @@ function displayCountries(countries) {
     capital = capital || 'Unkown';
     flags = flags.png;
     let localName = country.cca3;
+
+    population = formatPopulation(population);
 
     let countryEl = document.createElement('a');
     countryEl.classList.add('single-country');
